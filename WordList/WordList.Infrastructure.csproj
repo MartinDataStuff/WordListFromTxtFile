@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TextfileWordList.Entities\WordList.Entities.csproj" />
+    <ProjectReference Include="..\WordList.Interface\WordList.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

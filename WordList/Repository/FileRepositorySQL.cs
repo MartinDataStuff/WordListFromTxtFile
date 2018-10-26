@@ -1,11 +1,18 @@
 ﻿using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using WordList.Entities;
 using WordList.Interfaces;
 
-namespace WordList.Infrastructure
+namespace WordList.Infrastructure.Repository
 {
-    public class FileRepository : IRepository<DTOFile>
+    public class FileRepositorySQL : IRepository<DTOFile>
     {
+
+        private readonly WordListContext db;
+        public FileRepositorySQL(WordListContext context)
+        {
+            db = context;
+        }
         public void Create(DTOFile t)
         {
             throw new System.NotImplementedException();
